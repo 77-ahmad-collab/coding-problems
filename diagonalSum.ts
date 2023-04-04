@@ -30,9 +30,9 @@ function diagonalDifference(arr: number[][]): number {
 
   let [primaryDiagonalSum, secondaryDiagonalSum] = [0, 0];
   const arrayLength = arr.length - 1;
-  arr.forEach((value, index) => {
-    primaryDiagonalSum += arr[index][index];
-    secondaryDiagonalSum += arr[index][arrayLength - index];
+  arr.forEach((currentArray, index) => {
+    primaryDiagonalSum += currentArray[index];
+    secondaryDiagonalSum += currentArray[arrayLength - index];
   });
 
   return Math.abs(primaryDiagonalSum - secondaryDiagonalSum);
